@@ -16,7 +16,7 @@ public class Eight {
                     System.out.print(printNumber+" ");
                 spaceCount=i;
                 System.out.println();
-            }else{ // after completion of half pattern this else reduce print Values and go until upper loop terminate
+            }else{ // after completion of half pattern this else reduce print Values and spacecount go until upper loop terminate
                 printNumber--;
                 spaceCount--;
                 for(int j=1;j<spaceCount;j++)
@@ -32,3 +32,4 @@ public class Eight {
         printPattern(5);
     }
 }
+
