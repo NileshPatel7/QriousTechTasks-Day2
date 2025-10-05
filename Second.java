@@ -7,38 +7,50 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Second {
-    public static ArrayList<Object> seprateDataType(ArrayList<Object> obj){
-        ArrayList<Object> newList=new ArrayList<>();
+    public static void seprateDataType(ArrayList<Object> obj){
+
             //seperating data types using seprate loop for each data type. flow is int ,double ,boolean,string,long,float
+            ArrayList<Integer> integerList=new ArrayList<>();
+            ArrayList<Double> doubleList=new ArrayList<>();
+            ArrayList<Boolean> boolList=new ArrayList<>();
+            ArrayList<String> stringList=new ArrayList<>();
+            ArrayList<Long> longList=new ArrayList<>();
+            ArrayList<Float> floatList=new ArrayList<>();
 
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof Integer)
-                    newList.add(obj.get(i));
+                    integerList.add((int)obj.get(i));
             }
 
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof Double)
-                    newList.add(obj.get(i));
+                    doubleList.add((double)obj.get(i));
             }
 
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof Boolean)
-                    newList.add(obj.get(i));
+                    boolList.add((boolean)obj.get(i));
             }
 
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof String)
-                    newList.add(obj.get(i));
+                    stringList.add((String) obj.get(i));
             }
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof Long)
-                    newList.add(obj.get(i));
+                    longList.add((long)obj.get(i));
             }
             for(int i=0;i<obj.size();i++){
                 if(obj.get(i) instanceof Float)
-                    newList.add(obj.get(i));
+                    floatList.add((float)obj.get(i));
             }
-        return newList;
+
+        System.out.println("integer :- "+integerList);
+        System.out.println("double :- "+doubleList);
+        System.out.println("bool :- "+boolList);
+        System.out.println("string :- "+stringList);
+        System.out.println("long :- "+longList);
+        System.out.println("float :- "+floatList);
     }
     public static void main(String[] args) {
         ArrayList<Object> ob=new ArrayList<>();
@@ -53,7 +65,7 @@ public class Second {
         ob.add(true);
         ob.add(34);
         ob.add(600000L);
-        System.out.println(seprateDataType(ob));
+        seprateDataType(ob);
         // order of data type int ,double,boolean, string, long , float
     }
 }
